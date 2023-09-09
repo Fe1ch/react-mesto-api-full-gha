@@ -1,0 +1,12 @@
+.header__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 917px) {
+  .header__wrapper {
+    margin-right: 30px;
+  }
+}

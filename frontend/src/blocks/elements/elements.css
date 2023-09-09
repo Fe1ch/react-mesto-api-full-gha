@@ -1,0 +1,17 @@
+.elements {
+  min-height: 52vh;
+  max-width: 880px;
+  margin: 51px auto 67px;
+}
+
+@media screen and (max-width: 917px) {
+  .elements {
+    padding: 0 19px;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .elements {
+    margin: 36px auto 48px;
+  }
+}

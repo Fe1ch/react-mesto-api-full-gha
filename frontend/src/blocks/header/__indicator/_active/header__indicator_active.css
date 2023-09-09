@@ -1,0 +1,7 @@
+.header__indicator_active {
+  left: 30px;
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3),
+    inset 0 4px 4px rgba(255, 255, 255, 1),
+    inset 0 -4px 4px rgba(255, 255, 255, 1);
+}

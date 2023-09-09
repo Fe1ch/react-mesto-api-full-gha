@@ -1,0 +1,13 @@
+.header__icon {
+  position: absolute;
+  background-image: url(../../../images/Moon-dark.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  right: 5px;
+  top: 5px;
+  transition: 0.2s;
+}

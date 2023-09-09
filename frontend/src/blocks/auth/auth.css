@@ -1,0 +1,12 @@
+.auth {
+  max-width: 358px;
+  margin: 0 auto;
+  padding: 60px 0 0;
+  height: 75vh;
+}
+
+@media screen and (max-width: 618px) {
+  .auth {
+    max-width: 260px;
+  }
+}
