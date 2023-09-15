@@ -90,9 +90,9 @@ class Api {
 
 
 export const api = new Api({
-  url: 'https://mesto.nomoreparties.co/v1/cohort-68',
-  headers: {
-    authorization: 'f53ec09c-3e53-48d5-bf06-d899fc9c4246',
-    'Content-Type': 'application/json'
-  }
+  url: 'https://api.api.fe1ch.nomoredomainsicu.ru',
+  // headers: {
+  //   authorization: 'f53ec09c-3e53-48d5-bf06-d899fc9c4246',
+  //   'Content-Type': 'application/json'
+  // }
 })

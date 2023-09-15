@@ -1,4 +1,5 @@
-const BASE_URL = "https://auth.nomoreparties.co";
+// const BASE_URL = "https://auth.nomoreparties.co";
+const BASE_URL = "https://api.api.fe1ch.nomoredomainsicu.ru";
 const headers = { "Content-Type": "application/json" };
 
 function checkResponse(res) {
