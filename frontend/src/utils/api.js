@@ -85,7 +85,7 @@ class Api {
       method: isLiked ? 'DELETE' : 'PUT',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
-        'Content-type': 'application/json'
+        'Content-type': 'application/json',
       },
     })
       .then(this._checkResponse)

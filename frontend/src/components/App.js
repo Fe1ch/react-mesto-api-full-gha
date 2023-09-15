@@ -124,9 +124,12 @@ const App = () => {
   }
 
   const handleCardLike = useCallback((card) => {
-    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    const isLiked = card.likes.some(i => i === currentUser._id);
+
     api.changeLike(card._id, isLiked)
+
       .then((newCard) => {
+        console.log('currentUser', isLiked);
         setCards(cards => cards.map((c) => c._id === card._id ? newCard : c));
       })
       .catch((err) => {
@@ -199,9 +202,9 @@ const App = () => {
       });
   }
 
-  const onLogin = (password, email) => {
+  const onLogin = (email, password) => {
     auth
-      .authorize(password, email)
+      .authorize(email, password)
       .then((data) => {
         localStorage.setItem("jwt", data.token);
         setIsLoggedIn(true);
@@ -210,8 +213,7 @@ const App = () => {
       })
       .catch((err) => {
         setRegistrationStatus('error');
-        setIsInfoTooltipPopupOpen(true);
-        console.log(err.status);
+        setIsInfoTooltipPopupOpen(false);
         if (err.status === 400) {
           return console.log("не передано одно из полей");
         } else if (err.status === 401) {
@@ -236,7 +238,7 @@ const App = () => {
         .checkToken(jwt)
         .then((data) => {
           if (data) {
-            setEmail(data.data.email);
+            setEmail(data.email);
             setIsLoggedIn(true)
           }
         })
