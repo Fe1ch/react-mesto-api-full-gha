@@ -9,7 +9,7 @@ const {
   updateAvatar,
 } = require('../controllers/users');
 
-const { validateGetUser, validateUserInfo, validateUserAvatar } = require('../utils/validation')
+const { validateGetUser, validateUserInfo, validateUserAvatar } = require('../utils/validation');
 
 router.get('/users', getAllUsers);
 router.get('/users/me', getUserInfo);

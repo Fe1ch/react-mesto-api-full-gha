@@ -28,7 +28,7 @@ module.exports.getUserInfo = (req, res, next) => {
   return User.findOne({ _id })
     .orFail()
     .then((user) => res.send(user))
-    .catch(next)
+    .catch(next);
 };
 
 // POST CREATE USER

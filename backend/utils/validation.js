@@ -72,4 +72,4 @@ module.exports = {
   validateUserAvatar,
   validateDeleteCard,
   validateDislikeCard,
-}
+};
