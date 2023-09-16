@@ -129,7 +129,6 @@ const App = () => {
     api.changeLike(card._id, isLiked)
 
       .then((newCard) => {
-        console.log('currentUser', isLiked);
         setCards(cards => cards.map((c) => c._id === card._id ? newCard : c));
       })
       .catch((err) => {
@@ -213,7 +212,8 @@ const App = () => {
       })
       .catch((err) => {
         setRegistrationStatus('error');
-        setIsInfoTooltipPopupOpen(false);
+        setIsInfoTooltipPopupOpen(true);
+        console.log(err.status);
         if (err.status === 400) {
           return console.log("не передано одно из полей");
         } else if (err.status === 401) {
